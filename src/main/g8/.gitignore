@@ -5,6 +5,5 @@ out/
 .bloop/
 .bsp/
 .vscode/
-.scalafmt.conf
 .metals/
 **/metals.sbt
