@@ -1,3 +1,5 @@
+import BuildHelper._
+
 name := "$name;format="lower,hyphen"$"
 organization := "$base_package$"
 
@@ -14,3 +16,9 @@ addCompilerPlugin("org.augustjune" %% "context-applied" % "0.1.4")
 
 libraryDependencies ++= Libs.libraryDependencies
 testFrameworks += new TestFramework("zio.test.sbt.ZTestFramework")
+
+addCommandAlias("fmt", "; scalafmtSbt; scalafmtAll")
+addCommandAlias("fix", "; scalafixAll; scalafmtSbt; scalafmtAll")
+addCommandAlias("check", "; scalafmtSbtCheck; scalafmtCheckAll; scalafixAll --check")
+
+welcomeMessage
