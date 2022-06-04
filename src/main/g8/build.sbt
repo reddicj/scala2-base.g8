@@ -1,12 +1,10 @@
 name := "$name;format="lower,hyphen"$"
 organization := "$base_package$"
 
-scalaVersion := "$scala_version$"
-scalacOptions := Settings.compilerOptions
-
-semanticdbEnabled := true
-semanticdbVersion := scalafixSemanticdb.revision
-
+ThisBuild / scalaVersion := "$scala_version$"
+ThisBuild / scalacOptions := Settings.compilerOptions
+ThisBuild / semanticdbEnabled := true
+ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
 ThisBuild / scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.5.0"
 ThisBuild / scalafixScalaBinaryVersion := "2.13"
 
