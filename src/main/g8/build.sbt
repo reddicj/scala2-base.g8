@@ -7,7 +7,6 @@ ThisBuild / scalaVersion := "$scala_version$"
 ThisBuild / scalacOptions := Settings.compilerOptions
 ThisBuild / semanticdbEnabled := true
 ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
-ThisBuild / scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.5.0"
 ThisBuild / scalafixDependencies ++= List(
   "com.github.liancheng" %% "organize-imports" % "0.5.0",
   "com.github.vovapolu"  %% "scaluzzi"         % "0.1.21"
@@ -27,7 +26,7 @@ lazy val root = (project in file("."))
   .configs(IntegrationTest)
   .settings(
     welcomeMessage,
-    buildInfoSettings("dbmigration"),
+    buildInfoSettings("$name;format="lower,hyphen"$"),
     Defaults.itSettings,
     Libs.dependencies,
     inConfig(IntegrationTest)(scalafixConfigSettings(IntegrationTest))

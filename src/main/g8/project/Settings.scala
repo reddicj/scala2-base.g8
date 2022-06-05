@@ -8,6 +8,7 @@ object Settings {
     "-feature", // Emit warning and location for usages of features that should be imported explicitly.
     "-unchecked", // Enable additional warnings where generated code depends on assumptions.
     "-Xcheckinit", // Wrap field accessors to throw an exception on uninitialized access.
+    "-Xsource:3", // enables some Scala 3 syntax and behavior - https://docs.scala-lang.org/scala3/guides/migration/tooling-tour.html
 
     // ********** Warning Settings ***********************************************
     "-Werror", // Fail the compilation if there are any warnings.
