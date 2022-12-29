@@ -3,10 +3,10 @@ import Keys.*
 
 object Libs {
 
-  val ZIO = "2.0.2"
+  val ZIO = "2.0.5"
 
   val dependencies = libraryDependencies ++= Seq(
-    "org.typelevel"              %% "cats-core"    % "2.8.0",
+    "org.typelevel"              %% "cats-core"    % "2.9.0",
     "dev.zio"                    %% "zio"          % ZIO,
     "dev.zio"                    %% "zio-test"     % ZIO % "test,it",
     "dev.zio"                    %% "zio-test-sbt" % ZIO % "test,it",
