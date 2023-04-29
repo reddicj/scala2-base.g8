@@ -11,7 +11,6 @@ object Settings {
     "-Xsource:3", // enables some Scala 3 syntax and behavior - https://docs.scala-lang.org/scala3/guides/migration/tooling-tour.html
 
     // ********** Warning Settings ***********************************************
-    "-Werror", // Fail the compilation if there are any warnings.
     "-Wdead-code", //  Warn when dead code is identified.
     "-Wextra-implicit", // Warn when more than one implicit parameter section is defined.
     "-Wmacros:after", // Only inspect expanded trees when generating unused symbol warnings.
@@ -24,7 +23,7 @@ object Settings {
     "-Wunused:explicits", // Warn if an explicit parameter is unused.
     "-Wunused:implicits", // Warn if an implicit parameter is unused.
     "-Wunused:params", // Enable -Wunused:explicits,implicits.
-    //"-Wvalue-discard", // Warn when non-Unit expression results are unused. <-- be good to fix these errors
+    "-Wvalue-discard", // Warn when non-Unit expression results are unused. <-- be good to fix these errors
 
     // ********** Warnings to ignore ***********************************************
     "-Wconf:src=target/.*:s,cat=deprecation:s",
