@@ -23,12 +23,9 @@ addCommandAlias("fix", "; scalafixAll; scalafmtSbt; scalafmtAll")
 addCommandAlias("check", "; scalafmtSbtCheck; scalafmtCheckAll; scalafixAll --check")
 
 lazy val root = (project in file("."))
-  .configs(IntegrationTest)
   .settings(
     welcomeMessage,
     buildInfoSettings("$name;format="lower,hyphen"$"),
-    Defaults.itSettings,
-    Libs.dependencies,
-    inConfig(IntegrationTest)(scalafixConfigSettings(IntegrationTest))
+    Libs.dependencies
   )
   .enablePlugins(BuildInfoPlugin)
